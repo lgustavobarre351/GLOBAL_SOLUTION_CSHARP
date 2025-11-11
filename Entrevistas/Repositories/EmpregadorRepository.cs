@@ -43,18 +43,19 @@ public class EmpregadorRepository : IEmpregadorRepository
 
     public async Task<Empregador> UpdateAsync(Empregador empregador)
     {
-        // Garantir que não há tracking de outra instância
-        var tracked = _context.ChangeTracker.Entries<Empregador>()
-            .FirstOrDefault(e => e.Entity.Id == empregador.Id);
-        
-        if (tracked != null)
+        var existente = await _context.Empregadores.FindAsync(empregador.Id);
+        if (existente == null)
         {
-            _context.Entry(tracked.Entity).State = EntityState.Detached;
+            throw new InvalidOperationException("Empregador não encontrado");
         }
 
-        _context.Empregadores.Update(empregador);
+        // Atualizar apenas as propriedades editáveis (não inclui Entrevistas)
+        existente.Nome = empregador.Nome;
+        existente.Email = empregador.Email;
+        existente.Telefone = empregador.Telefone;
+
         await _context.SaveChangesAsync();
-        return empregador;
+        return existente;
     }
 
     public async Task<bool> DeleteAsync(Guid id)
