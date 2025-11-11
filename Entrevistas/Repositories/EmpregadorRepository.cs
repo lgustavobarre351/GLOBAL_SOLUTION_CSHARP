@@ -43,6 +43,15 @@ public class EmpregadorRepository : IEmpregadorRepository
 
     public async Task<Empregador> UpdateAsync(Empregador empregador)
     {
+        // Garantir que não há tracking de outra instância
+        var tracked = _context.ChangeTracker.Entries<Empregador>()
+            .FirstOrDefault(e => e.Entity.Id == empregador.Id);
+        
+        if (tracked != null)
+        {
+            _context.Entry(tracked.Entity).State = EntityState.Detached;
+        }
+
         _context.Empregadores.Update(empregador);
         await _context.SaveChangesAsync();
         return empregador;
