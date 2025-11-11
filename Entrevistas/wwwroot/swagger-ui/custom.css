@@ -1,0 +1,26 @@
+/* ✅ OCULTAR a seção Schemas completamente */
+.models {
+    display: none !important;
+}
+
+.model-container {
+    display: none !important;
+}
+
+/* ✅ Manter todas as tags ABERTAS automaticamente */
+.opblock-tag-section {
+    display: block !important;
+}
+
+.opblock-tag {
+    cursor: default !important;
+}
+
+/* ✅ Remover setas de expandir/colapsar das tags */
+.opblock-tag .arrow {
+    display: none !important;
+}
+
+.expand-operation {
+    display: none !important;
+}
