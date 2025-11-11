@@ -2,11 +2,11 @@
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
     "builder": "DOCKERFILE",
-    "dockerfilePath": "Investimentos/Dockerfile"
+    "dockerfilePath": "Entrevistas/Dockerfile"
   },
   "deploy": {
-    "startCommand": "dotnet Investimentos.dll --environment=Production",
-    "healthcheckPath": "/debug",
+    "startCommand": "dotnet Entrevistas.dll --environment=Production",
+    "healthcheckPath": "/swagger",
     "healthcheckTimeout": 60,
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 3

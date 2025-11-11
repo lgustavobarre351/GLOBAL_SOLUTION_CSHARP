@@ -3,14 +3,14 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
 # Copy projeto e restaurar dependências
-COPY Investimentos/Investimentos.csproj Investimentos/
-WORKDIR /src/Investimentos
+COPY Entrevistas/Entrevistas.csproj Entrevistas/
+WORKDIR /src/Entrevistas
 RUN dotnet restore
 
 # Copy source code e build
 WORKDIR /src
-COPY Investimentos/ Investimentos/
-WORKDIR /src/Investimentos
+COPY Entrevistas/ Entrevistas/
+WORKDIR /src/Entrevistas
 RUN dotnet publish -c Release -o /app/publish --no-restore
 
 # Runtime stage - imagem menor
@@ -39,4 +39,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
     CMD curl -f http://localhost:8080/swagger || exit 1
 
 # Entry point
-ENTRYPOINT ["dotnet", "Investimentos.dll"]
+ENTRYPOINT ["dotnet", "Entrevistas.dll"]
