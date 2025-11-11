@@ -1,5 +1,8 @@
 # 🎯 API RESTful - Sistema de Agendamento de Entrevistas
 
+## 👥 **EQUIPE**
+- **Julia Lins** - RM: 98690 | **Luis Barreto** - RM: 99210 | **Victor Aranda** - RM: 99667
+
 > **Challenge FIAP 2025 - Global Solution C#**  
 > *O Futuro do Trabalho: Plataforma inteligente para conectar empregadores e candidatos*
 
@@ -8,6 +11,15 @@
 [![Entity Framework](https://img.shields.io/badge/EF%20Core-9.0-512BD4)](https://docs.microsoft.com/ef/)
 [![Swagger](https://img.shields.io/badge/Swagger-OpenAPI-85EA2D?logo=swagger)](https://swagger.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+---
+
+## 🏗️ Arquitetura do Sistema
+
+<div align="center">
+  <img src="Diagrama.png" alt="Arquitetura da API" width="100%" />
+  <p><em>Arquitetura completa da solução: Controllers → Services → Repositories → Entity Framework → PostgreSQL</em></p>
+</div>
 
 ---
 
