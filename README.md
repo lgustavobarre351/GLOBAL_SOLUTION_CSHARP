@@ -17,7 +17,7 @@
 ## 🏗️ Arquitetura do Sistema
 
 <div align="center">
-  <img src="Diagrama.png" alt="Arquitetura da API" width="100%" />
+  <img src="diagrama.png" alt="Arquitetura da API" width="100%" />
   <p><em>Arquitetura completa da solução: Controllers → Services → Repositories → Entity Framework → PostgreSQL</em></p>
 </div>
 
