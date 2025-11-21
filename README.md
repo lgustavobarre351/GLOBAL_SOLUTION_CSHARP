@@ -15,6 +15,7 @@
 ---
 
 ## 🔗 Links Principais
+🎥 **[Vídeo Demonstração e Explicação Técnica](https://www.youtube.com/watch?v=xb3PyWcwHP0)**
 
 🏆 **[Pitch do Projeto para Global Solution](https://youtu.be/9UL5fSXV-Ko)**
 
