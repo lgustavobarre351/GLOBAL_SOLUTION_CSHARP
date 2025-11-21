@@ -14,6 +14,14 @@
 
 ---
 
+## 🔗 Links Principais
+
+🏆 **[Pitch do Projeto para Global Solution](https://youtu.be/9UL5fSXV-Ko)**
+
+🌐 **[COMPASS Platform (Site Web)](https://compass-app-kappa.vercel.app/)**
+
+---
+
 ## 🏗️ Arquitetura do Sistema
 
 <div align="center">
